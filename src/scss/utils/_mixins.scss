@@ -1,0 +1,47 @@
+@function rem($pixels, $context: $mainFontSize) {
+  @if (unitless($pixels)) {
+    $pixels: $pixels * 1px;
+  }
+
+  @if (unitless($context)) {
+    $context: $context * 1px;
+  }
+
+  @return $pixels / $context * 1rem;
+}
+
+@mixin size($width,$height: $width) {
+  width: $width;
+  height: $height;
+}
+
+@mixin line($color, $width: 402px) {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: -16px;
+  width: $width;
+  border-top: 1px solid $color;
+}
+
+@mixin title($color, $fsize: rem(32)) {
+  text-transform: uppercase;
+  font-size: $fsize;
+  color: $color;
+  font-weight: $font-roman;
+}
+
+@mixin subtitle($color, $fsize: rem(24)) {
+  text-transform: uppercase;
+  font-size: $fsize;
+  color: $color;
+  font-family: $main-font;
+  font-weight: $font-thin;
+}
+
+@mixin placeholder {
+  ::-webkit-input-placeholder {@content}
+  :-moz-placeholder           {@content}
+  ::-moz-placeholder          {@content}
+  :-ms-input-placeholder      {@content}
+}

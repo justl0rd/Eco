@@ -1,0 +1,12 @@
+@import "utils/libs";
+@import "utils/vars";
+@import "utils/mixins";
+@import "utils/fonts";
+@import "utils/animations";
+
+// markup
+@import "modules/general/specification";
+@import "modules/general/main";
+@import "modules/header";
+@import "modules/footer";
+@import "modules/media";

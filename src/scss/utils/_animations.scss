@@ -1,0 +1,84 @@
+@keyframes line-left {
+    0% { transform: rotate(-22deg) translate(130%); }   
+    100% { transform: rotate(-22deg) translate(10%); }
+}
+@keyframes line-right {
+    0% { transform: rotate(22deg) translate(-130%); }   
+    100% { transform: rotate(22deg) translate(-10%); }
+}
+@keyframes line-opacity {
+    0% { opacity: 0; } 
+    58% { opacity: 0; }   
+    100% { opacity: 1; }
+}
+
+@keyframes skill-in {
+    0% { 
+        width: 98%;
+        width: 100%;
+        z-index: 1;
+    } 
+    40% {
+        width: 3%;
+        height: 3%;
+    }
+    50% {
+        z-index: 3;
+    }   
+    60% {
+        width: 3%;
+        height: 3%;
+    }
+    100% { 
+        width: 98%;
+        height: 100%;
+    }
+}
+@keyframes skill-out {
+    0% { 
+        width: 98%;
+        width: 100%;
+        z-index: 3;
+    } 
+    40% {
+        width: 3%;
+        height: 3%;
+    }
+    50% {
+        z-index: 1;
+    }   
+    60% {
+        width: 3%;
+        height: 3%;
+    }
+    100% { 
+        width: 98%;
+        height: 100%;
+    }
+}
+
+[data-aos="arrowIn"] {
+    opacity: 0;
+    transition-property: opacity;
+    &.aos-animate {
+        opacity: 1;
+    }
+}
+[data-aos="arrowScale"] {
+    &::after {
+        width: 0 !important;
+        transition: all 1s;
+    } 
+    &::before {
+        height: 0 !important;
+        transition: all 1s;
+    } 
+    &.aos-animate {
+        &::after {
+            width: 100px !important;
+        }
+        &::before {
+            height: 50vh !important;
+        }
+    }
+}

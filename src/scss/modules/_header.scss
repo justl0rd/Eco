@@ -1,0 +1,183 @@
+.header {
+   position: relative;
+   background: url('../img/header-bg.jpg') no-repeat left top 20%;
+   background-size: cover;
+   color: $main-light-color;
+   padding: 50px 0;
+   min-height: 100vh;
+
+   &-topbar {
+       &__logo {
+           width: 53px;
+           height: 53px;
+           object-fit: contain;
+           margin-right: 70px;
+       }
+   }
+
+   &-main {
+        display: flex;
+        flex-direction: column;
+        height: calc(100vh - 110px);
+
+       &__topbar {
+           align-items: center;
+       }
+       &__title {
+           text-transform: uppercase;
+           margin-top: auto;
+           
+           span {
+               display: block;
+               font-weight: $fw-light;
+               font-size: rem(64);
+               margin-top: 15px;
+           }
+       }
+       &__menu-link {
+           letter-spacing: 0.14em;
+           margin-right: 65px;
+       }
+       &__link {
+           background: $main-light-color;
+           padding: 20px 40px;
+           font-weight: $fw-semi;
+           color: $green-text;
+           background: $btn-color;
+           width: max-content;
+           margin: 25px 0 80px;
+
+           &:hover {
+            background: $main-text-color;
+            color: $btn-color;
+           }
+
+       }
+       .laungages {
+            text-transform: uppercase;
+
+           a {
+               color: $grey-color;
+               font-weight: $fw-bold;
+               
+               &:hover {
+                   color: $main-light-color;
+               }
+           }
+           span {
+               font-weight: $fw-medium;
+               margin-left: 20px;
+               padding: 0 5px 5px;
+               border-bottom: 4px solid;
+           }
+       }
+   }
+
+   &-adds {
+       position: absolute;
+       width: 40%;
+       height: 100%;
+       right: 0;
+       top: 0;
+       flex-direction: column;
+       justify-content: space-between;
+
+       &__info {
+           width: 100%;
+           height: 100%;
+
+           &-block {
+               width: 50%;
+               flex-direction: column;
+               justify-content: space-between;
+               padding: 60px 50px 80px;
+
+               h4 {
+                   text-transform: uppercase;
+                   line-height: 1.4em;
+               }
+
+               a {
+                   font-size: rem(19);
+                   width: max-content;
+                   padding: 0 2px 4px;
+                   font-style: italic;
+                   border-bottom: 3px solid;
+                   transition: all .1s;
+
+                   &:hover {
+                       color: $grey-color;
+                   }
+               }
+
+               &_sequrity {
+                   background: url('../img/security.jpg') no-repeat center center;
+                   background-size: cover;
+               }
+               &_waste {
+                   background: url('../img/waste.jpg') no-repeat center center;
+                   background-size: cover;
+               }
+           }
+       }
+       &__contacts {
+           height: 150px;
+           background: $dark-color;
+           align-items: center;
+           padding: 0 50px;
+
+           a {
+               margin-right: auto;
+               font-weight: $fw-medium;
+               font-size: rem(19);
+               padding: 13px 0 13px 50px;
+               position: relative;
+           }
+       }
+       &__email {
+           &::before {
+               content: '';
+               width: 38px;
+               height: 38px;
+               display: block;
+               border-radius: 50%;
+               border: 1px solid;
+               position: absolute;
+               left: 0;
+               top: 50%;
+               transform: translateY(-50%);
+               background: url('../img/icons.png') no-repeat left 1px center;
+               transition: all .1s;
+           }
+
+           &:hover {
+               &::before {
+                   transform: translateY(-50%) scale(1.05);
+               }
+               color: $dark-grey-color;
+           }
+       }
+       &__phone {
+           &::before {
+               content: '';
+               width: 38px;
+               height: 38px;
+               display: block;
+               border-radius: 50%;
+               border: 1px solid;
+               position: absolute;
+               left: 0;
+               top: 50%;
+               transform: translateY(-50%);
+               background: url('../img/icons.png') no-repeat left -32px center;
+               transition: all .1s;
+           }
+           &:hover {
+               &::before {
+                   transform: translateY(-50%) scale(1.05);
+               }
+               color: $dark-grey-color;
+           }
+       }
+   }
+}
