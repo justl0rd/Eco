@@ -115,6 +115,14 @@ input {
 	display: flex;
 }
 
+.bold {
+	font-weight: $fw-bold;
+}
+
+.hide-text {
+	display: none;
+}
+
 #overlay {
 	background: rgba(0, 0, 0, 0.7);
 	position: fixed;
@@ -171,7 +179,7 @@ label.error {
     font-size: 12px;
     color: $main-red-color;
     position: absolute !important;
-    bottom: -25px;
+    bottom: -41px;
 	left: 50%;
 	transform: translateX(-50%);
 	width: fit-content !important;

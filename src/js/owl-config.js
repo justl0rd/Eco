@@ -1,10 +1,32 @@
-$('.mechanics__slider').owlCarousel({
-    loop:true,
+$('.parthners__slider').owlCarousel({
+    loop:false,
     margin:10,
     nav:true,
+    navText: ["<div class='slider-button slider-button__prev'></div>","<div class='slider-button slider-button__next'></div>"],
     responsive:{
         0:{
             items:1
+        },
+        768:{
+            items:2
+        },
+        992:{
+            items:3
+        },
+        1200:{
+            items:5
+        }
+    }
+});
+
+$('.licenses__slider').owlCarousel({
+    loop:false,
+    margin:10,
+    nav:true,
+    navText: ["<div class='slider-button slider-button__prev'></div>","<div class='slider-button slider-button__next'></div>"],
+    responsive:{
+        0:{
+            items:2
         },
         768:{
             items:2

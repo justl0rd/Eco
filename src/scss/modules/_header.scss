@@ -37,6 +37,10 @@
        &__menu-link {
            letter-spacing: 0.14em;
            margin-right: 65px;
+
+           &:hover {
+               opacity: 0.75;
+           }
        }
        &__link {
            background: $main-light-color;

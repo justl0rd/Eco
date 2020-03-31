@@ -1,4 +1,15 @@
 $(document).ready(function() {
+    const messagesContent = {};
+    if (lang === 'uk') {
+        messagesContent.empty = "Поле обов'язкове для заповнення";
+        messagesContent.tel = "Телефон може містити символи + - ()";
+        messagesContent.email = "Невірний формат E-mail";
+        
+    } else {
+        messagesContent.empty = "Поле обязательно для заполнения";
+        messagesContent.tel = "Телефон может содержать символы + - ()";
+        messagesContent.email = "Неверный формат E-mail";
+    }
     $('[data-submit]').on('click', function(e) {
         e.preventDefault();
         $(this).parent('form').submit();
@@ -29,6 +40,19 @@ $(document).ready(function() {
                 },
                 country: {
                     required: true
+                }
+            },
+            messages: {
+                tel: {
+                    required: messagesContent.empty,
+                    regex: messagesContent.tel,
+                },
+                name: {
+                    required: messagesContent.empty,
+                },
+                email: {
+                    required: messagesContent.empty,
+                    email: messagesContent.email,
                 }
             },
 
