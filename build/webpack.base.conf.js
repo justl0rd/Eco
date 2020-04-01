@@ -82,6 +82,11 @@ module.exports = {
       filename: './index.html',
       defer: ['main']
     }),
+    new HtmlWebpackPlugin({
+      hash: false,
+      template: `${PATHS.src}/ru.html`,
+      filename: './ru.html'
+    }),
     new CopyWebpackPlugin([
       { from: `${PATHS.src}/img`, to: `${PATHS.assets}img` },
       { from: `${PATHS.src}/static`, to: '' },

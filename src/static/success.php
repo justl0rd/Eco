@@ -2,7 +2,7 @@
 header("Content-Type: text/html; charset=utf-8");
 $email = htmlspecialchars($_POST["email"]);
 $getName = htmlspecialchars($_POST["name"]);
-$getCountry = htmlspecialchars($_POST["country"]);
+$getTel = htmlspecialchars($_POST["tel"]);
 $refferer = getenv('HTTP_REFERER');
 $date = date("d.m.y"); 
 $time = date("H:i"); 
@@ -18,22 +18,22 @@ if ($email) {
 	$useremail = "<b>Email клиента:</b> " . $email ."<br>";
 }
 
-$country = "" ;
-if ($getCountry) {
-	$country = "<b>Страна:</b> " . $getCountry ."<br>";
+$tel = "" ;
+if ($getTel) {
+	$tel = "<b>Телефон:</b> " . $getTel ."<br>";
 }
 
 
 // Email Structure
 
-$tema = "Eco ";
+$tema = "Заявка на сайте";
 $message_to_myemail = "
 $username
-$country
+$tel
 $useremail 
 <b>Дата и время заполнения заявки:</b> $date | $time <br>
 <b>Источник (ссылка):</b> $refferer
 ";
 
-mail($myemail, $tema, $message_to_myemail, "From: <info@webdeity.ru> \r\n Eco \r\n"."MIME-Version: 1.0\r\n"."Content-type: text/html; charset=utf-8\r\n" );
+mail($myemail, $tema, $message_to_myemail, "From: <info@webdeity.ru> \r\n КИЕВСКИЙ ЦЕНТР ПРОМЭКОЛОГИИ \r\n"."MIME-Version: 1.0\r\n"."Content-type: text/html; charset=utf-8\r\n" );
 ?>
