@@ -19,7 +19,7 @@ let messageModalContent = document.getElementById('message__content');
 function popUpMessage () {
     messagesContainer.addEventListener('click', el => {
         target = el.target;
-        if (target.classList.contains('catalog__more') ) {
+        if (target.classList.contains('catalog__more-btn') ) {
             messageModal.classList.add('active');
             let content = target.parentElement.querySelector('.hide-text').cloneNode(true);
             messageModalContent.appendChild(content); 

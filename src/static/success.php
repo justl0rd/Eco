@@ -6,7 +6,7 @@ $getTel = htmlspecialchars($_POST["tel"]);
 $refferer = getenv('HTTP_REFERER');
 $date = date("d.m.y"); 
 $time = date("H:i"); 
-$myemail = "marmorela@ukr.net";
+$myemail = "ecoprom.kiev@gmail.com";
 
 $username = "" ;
 if ($getName) {
@@ -35,5 +35,5 @@ $useremail
 <b>Источник (ссылка):</b> $refferer
 ";
 
-mail($myemail, $tema, $message_to_myemail, "From: <info@webdeity.ru> \r\n КИЕВСКИЙ ЦЕНТР ПРОМЭКОЛОГИИ \r\n"."MIME-Version: 1.0\r\n"."Content-type: text/html; charset=utf-8\r\n" );
+mail($myemail, $tema, $message_to_myemail, "From: <ecoprom.kiev@gmail.com> \r\n КИЕВСКИЙ ЦЕНТР ПРОМЭКОЛОГИИ \r\n"."MIME-Version: 1.0\r\n"."Content-type: text/html; charset=utf-8\r\n" );
 ?>

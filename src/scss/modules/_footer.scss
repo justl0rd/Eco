@@ -1,11 +1,12 @@
 .footer {
     background: $footer-bg;
-    padding: 60px 0 40px;
+    padding: 40px 0 20px;
     color: $main-light-color;
 
 
     &__wrapper {
         justify-content: space-between;
+        flex-wrap: wrap;
     }
     &__logo {
         max-width: 180px;
@@ -17,7 +18,7 @@
         }
     }
     &__contacts {
-        width: 100%;
+        width: calc(100% - 300px);
         justify-content: space-evenly;
         margin: 0 2rem;
 
@@ -59,5 +60,8 @@
         font-size: rem(14);
         width: max-content;
         flex-shrink: 0;
+        width: 100%;
+        text-align: center;
+        margin-top: 20px;
     }
 }

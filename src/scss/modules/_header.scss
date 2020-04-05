@@ -52,7 +52,7 @@
            margin: 25px 0 80px;
 
            &:hover {
-            background: $main-text-color;
+            background: $green-text;
             color: $btn-color;
            }
 
@@ -101,7 +101,7 @@
                    line-height: 1.4em;
                }
 
-               a {
+               span {
                    font-size: rem(19);
                    width: max-content;
                    padding: 0 2px 4px;
@@ -137,6 +137,12 @@
                padding: 13px 0 13px 50px;
                position: relative;
            }
+       }
+       &__phones {
+           display: flex;
+           flex-direction: column;
+           margin-left: 0.5rem;
+           margin-right: auto;
        }
        &__email {
            &::before {

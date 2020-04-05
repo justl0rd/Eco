@@ -20,12 +20,13 @@
     }
 }
 .sequrity {
-    padding: 170px 0 30px;
+    padding: 170px 7.5% 130px;
+    background: $dark-grey-color;
 
     &__title {
         text-transform: uppercase;
         text-align: center;
-        margin-bottom: 70px;
+        margin-bottom: 45px;
     }
     &__items {
         display: flex;
@@ -35,7 +36,7 @@
     &__item {
         width: 25%;
         margin-top: 30px;
-        padding: 15px 50px 0;
+        padding: 5px 30px 0;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -44,8 +45,13 @@
 
         &-title {
             text-align: center;
-            margin-top: 35px;
+            margin-top: 5px;
             margin-bottom: 20px;
+        }
+        &-img {
+            width: 220px;
+            object-fit: contain;
+            cursor: pointer;
         }
 
         &:hover {
@@ -58,12 +64,12 @@
 }
 
 .waste {
-    padding: 80px 0 150px;
+    padding: 160px 7.5% 160px;
 
     &__title {
         text-transform: uppercase;
         text-align: center;
-        margin-bottom: 70px;
+        margin-bottom: 5px;
     }
     &__items {
         display: flex;
@@ -73,7 +79,7 @@
     &__item {
         width: 25%;
         margin-top: 30px;
-        padding: 15px 50px 0;
+        padding: 5px 30px 0;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -84,6 +90,12 @@
             text-align: center;
             margin-top: 35px;
             margin-bottom: 20px;
+        }
+
+        &-img {
+            width: 220px;
+            object-fit: contain;
+            cursor: pointer;
         }
 
         &:hover {
@@ -99,6 +111,12 @@
     position: relative;
     padding: 170px 0 ;
 
+    &__form {
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 
     &__title {
         text-transform: uppercase;
@@ -113,9 +131,11 @@
 
         &_green {
             color: $green-text;
+            margin-bottom: 40px;
         }
     }
     form {
+        width: 100%;
         max-width: 500px;
         display: flex;
         flex-direction: column;
@@ -183,6 +203,8 @@
         background: $main-light-color;
 
         form {
+            max-width: 400px;
+
             input {
                border-bottom: 1px solid $green-text;
             }
@@ -208,7 +230,8 @@
     &__contacts {
         width: 100%;
         margin-top: 40px;
-        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
     }
 
     &__email {
@@ -246,6 +269,7 @@
         position: relative;
         padding: 0 0 0 40px;
         display: flex;
+        margin-bottom: 10px;
         align-items: center;
         font-family: Arial, sans-serif;
         font-weight: $fw-medium;
@@ -272,7 +296,7 @@
 }
 
 .about {
-    padding: 170px 0;
+    padding: 170px 7.5% 200px;
 
     &__title {
         text-align: center;
@@ -283,7 +307,7 @@
 }
 
 .skills {
-    margin-bottom: 110px;
+    margin-bottom: 100px;
 
     &__item {
         width: 25%;
@@ -312,6 +336,7 @@
 }
 
 .parthners {
+    padding-bottom: 40px;
     &__title {
         text-align: center;
         text-transform: uppercase;
@@ -481,17 +506,13 @@
     }
 }
 .message {
-    background: $main-light-color;
     position: fixed;
-    left: 5%;
-    top: 5%;
-    width: 90%;
-    height: 90%;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
     z-index: 10;
-    border-radius: 5px;
-    border: 1px solid $dark-grey-color;
     display: none;
-    padding: 1.5rem 0 1rem 2rem;
 
     .hide-text {
         display: block;
@@ -502,13 +523,14 @@
         h3 {
             margin-top: 1.5rem;
             margin-bottom: 2rem;
-            font-size: rem(35);
+            font-size: rem(23);
             text-transform: uppercase;
             text-align: center;
         }
         h5 {
             margin-bottom: .8rem;
             margin-top: 1.5rem;
+            font-size: rem(19);
         }
         a {
             text-decoration: underline;
@@ -525,8 +547,31 @@
         }
     }
 
-    &__content {
+    &__wrapp {
+        background: $main-light-color;
+        position: fixed;
+        left: 10%;
+        top: 50%;
+        width: 80%;
+        height: auto;
+        max-height: 80vh;
+        transform: translateY(-50%);
+        z-index: 11;
+        border-radius: 5px;
+        padding: 1rem 2rem;
+        background: $green-text;
+        color: $main-light-color;
         overflow-y: scroll;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+        &::-webkit-scrollbar {
+            width: 0px;  /* ширина scrollbar'a */
+            background: transparent;  /* опционально */
+        }
+    }
+
+    &__content {
+        
     }
     
     &__close {
@@ -542,13 +587,23 @@
         align-items: center;
         justify-content: center;
         line-height: 15px;
-        color: $main-text-color;
+        color: $dark-grey-color;
+        z-index: 13;
 
         &:hover {
-            color: $slide-bg;
+            color: $main-light-color;
         }
     }
     &.active {
         display: flex;
+    }
+    &__bg {
+        position: fixed;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.8);
+        z-index: 10;
     }
 }
